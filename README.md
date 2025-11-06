@@ -53,25 +53,26 @@ Now you need to tell Visual Studio to switch to the branch you just created.
 
 
 ## Part 4: Saving Your Work (Committing & Pushing)
-When you've made progress and want to save your work to GitHub:
 
 First, **always pull down the latest changes from production!** This makes sure you have everyone else's updates and helps prevent conflicts. 
-
 1. Click the **Source Control** icon on the left sidebar (it looks like a branching diagram)
 2. Click the **three dots** at the top of the **Source Control panel**
 3. Hover over **Pull, Push** and then select **Pull from…**
 4. In the dropdown, select **origin/production**
+5. Click **Sync Changes** (and click OK if there is a pop up)
 
 This brings in all the latest work that's been merged into production by other people.
 
 If you see any conflicts pop up, please reach out to the group for help before continuing. We will want to look at it together to make sure nothing is being overwritten.
 
-5. Now you'll see a list of files you've changed. Hover over the files and **click the + button** to "stage" them (basically tells Git you want to save these changes)
-6. In the message box at the top, **write a short description** of what you did (ex. "Added navigation bar" or "Fixed page styling")
-7. Click the **Commit** button
-8. Click the **Sync Changes** button.
+When you've made progress and want to save your work to GitHub:
+1. Click the **Source Control** icon on the left sidebar
+2. You should see a list of files you've changed in the left panel. Hover over the files and **click the + button** to "stage" them.
+3. In the message box at the top, **write a short description** of what you did (ex. "Added navigation bar" or "Fixed page styling")
+4. Click the **Commit** button.
+5. Click the **Sync Changes** button.
 
-It is recommended to get in the habit of pulling from production before you start working each day as well. It can help prevent conflicts :)
+It is recommended to get in the habit of pulling before you start working each day AND before you push. It’ll help prevent conflicts :)
 
 ## Part 5: Merging Your Work (Creating a Pull Request)
 You’ll need to create a Pull Request (PR) when you are completely done with your task and ready to add it to the main project.
