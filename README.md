@@ -4,9 +4,9 @@ I know this seems like a lot at first, but it gets easier over time and will mak
 ## How Our Repository is Organized
 Branches > Production > Main
 
-Branches –> Individual workspaces where each person works on their part of the project (these will be based off of issues in the Issue tab)
-Production –> Where we merge everyone's finished work together to test it before going live
-Main –> The actual live website code – we only update this once we're 100% sure everything works.
+- Branches –> Individual workspaces where each person works on their part of the project (these will be based off of issues in the Issue tab)
+- Production –> Where we merge everyone's finished work together to test it before going live
+- Main –> The actual live website code – we only update this once we're 100% sure everything works.
 
 This setup helps us avoid conflicts and makes sure we can test everything together before the website actually updates.
 
