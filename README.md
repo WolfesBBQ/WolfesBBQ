@@ -94,6 +94,7 @@ Whoever was selected as the Reviewer will review it, and then we'll merge it int
 - Merge conflicts –> This happens when someone else changed the same code you did. Reach out if you experience this, it's probably easier to fix than you think :)
 - Unsure which branch you’re on → Check the bottom-left corner of Visual Studio. That's where it always shows your current branch.
 - Made changes to the wrong branch (it happens lol) → We can move them! Reach out to the group and we can figure it out!
+- Made changes, but they are not showing up in the Source Control tab and you can't Commit them → Close VS and reopen it – you should see the changes now and should be able to stage and commit them now
 
 Feel free to ask questions in the discord. Lots of great resources online, but it can still be a bit confusing/overwhelming if you’ve never used GitHub 
 (all of us are still learning, its all good). Honestly, now is a great time to play with GitHub/VS so don’t be afraid to try things!! 
