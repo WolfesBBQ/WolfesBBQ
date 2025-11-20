@@ -4,18 +4,10 @@
   <link rel="stylesheet" href="wolfies.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
   <title>Wolfie's Smokehouse and BBQ</title>
   <style>
     /* ---------- Global Styles ---------- */
-    #map { height: 500px; }
   </style>
-
 </head>
 <body>
   <header>
@@ -35,16 +27,6 @@
     Our pitmasters use hickory and oak to smoke ribs, brisket, and pulled pork for hours until
     each bite melts in your mouth. Come experience flavors inspired by Southern tradition and
     served with a side of hospitality.</p>
-
-     <div id="map"></div>
-     <script> var map = L.map('map').setView([40.490404273955875, -86.13097877926005], 15);
-      L.tileLayer('https://api.maptiler.com/maps/base-v4/256/{z}/{x}/{y}.png?key=pA82nhm5674jWgKvChwM', {
-        maxZoom: 25,
-        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-      }).addTo(map);
-      var marker = L.marker([40.490404273955875, -86.13097877926005]).addTo(map);
-      marker.bindPopup("Wolfes Smokehouse and BBQ<br>502 N Main St, Kokomo, IN 46901");
-     </script>
   </section>
 
   <section id="menu">
