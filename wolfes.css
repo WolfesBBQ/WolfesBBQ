@@ -162,7 +162,8 @@ h2{
 }
 
 #map{
-  margin-top: 20px;
-  margin-left: 500px;
-  margin-right: 500px;
+padding: 60px 20px;
+max-width: 1000px;
+margin: auto;
+margin-top: 20px;
 }
