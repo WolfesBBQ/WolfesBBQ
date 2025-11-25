@@ -130,6 +130,7 @@ body {
 
     footer p {
       margin: 0;
+<<<<<<< HEAD:wolfes.css
     }
 
 div.gallery {
@@ -167,3 +168,6 @@ max-width: 1000px;
 margin: auto;
 margin-top: 20px;
 }
+=======
+    }
+>>>>>>> 268a676fc2538cea2f169ba7a408d2d4ae5e48a6:wolfies.css
