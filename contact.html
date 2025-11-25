@@ -13,7 +13,6 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
 <style>
-  
  #map { height: 500px; }
   </style>
 </head>
@@ -31,9 +30,7 @@
     <a href="Photos.html">Photos</a>
   </nav>
 
-<!--Russell wants to add in a map and will give syntax-->
-
-     <div id="map"></div>
+     <div id="map">
      <script> var map = L.map('map').setView([40.490404273955875, -86.13097877926005], 15);
       L.tileLayer('https://api.maptiler.com/maps/base-v4/256/{z}/{x}/{y}.png?key=pA82nhm5674jWgKvChwM', {
         maxZoom: 25,
@@ -42,7 +39,7 @@
       var marker = L.marker([40.490404273955875, -86.13097877926005]).addTo(map);
       marker.bindPopup("Wolfes Smokehouse and BBQ<br>502 N Main St, Kokomo, IN 46901");
      </script>
-
+     </div>
     <section id="contact">
     <h2>Contact Us</h2>
     <p>We’d love to hear from you! Whether it’s a catering request or feedback on your meal, drop us a message below.</p>
