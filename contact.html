@@ -12,9 +12,6 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
-<style>
- #map { height: 500px; }
-  </style>
 </head>
 <body>
   <header>
@@ -30,28 +27,35 @@
     <a href="Photos.html">Photos</a>
   </nav>
 
-     <div id="map">
-     <script> var map = L.map('map').setView([40.490404273955875, -86.13097877926005], 15);
-      L.tileLayer('https://api.maptiler.com/maps/base-v4/256/{z}/{x}/{y}.png?key=pA82nhm5674jWgKvChwM', {
-        maxZoom: 25,
-        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-      }).addTo(map);
-      var marker = L.marker([40.490404273955875, -86.13097877926005]).addTo(map);
-      marker.bindPopup("Wolfes Smokehouse and BBQ<br>502 N Main St, Kokomo, IN 46901");
-     </script>
-     </div>
+  <!-- Contact + Map Container -->
+  <div class="contact-container">
     <section id="contact">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you! Whether it’s a catering request or feedback on your meal, drop us a message below.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-    <footer>
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Whether it’s a catering request or feedback on your meal, drop us a message below.</p>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <div id="map"></div>
+  </div>
+
+  <footer>
     <p>&copy; Wolfes Smokehouse and BBQ | 502 N Main St, Kokomo, IN 46901  | (765) 459-2058</p>
   </footer>
+
+  <!-- Leaflet Map Script -->
+  <script>
+    var map = L.map('map').setView([40.490404273955875, -86.13097877926005], 15);
+    L.tileLayer('https://api.maptiler.com/maps/base-v4/256/{z}/{x}/{y}.png?key=pA82nhm5674jWgKvChwM', {
+      maxZoom: 25,
+      attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+    }).addTo(map);
+    var marker = L.marker([40.490404273955875, -86.13097877926005]).addTo(map);
+    marker.bindPopup("Wolfes Smokehouse and BBQ<br>502 N Main St, Kokomo, IN 46901");
+  </script>
 </body>
 </html>
