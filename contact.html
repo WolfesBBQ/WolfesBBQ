@@ -1,57 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="wolfes.css">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wolfes Smokehouse and BBQ</title>
+<!-- Left side: Map -->
+<div class="split left">
+  <div id="map"></div>
+  <script>
+    var map = L.map('map').setView([40.490404273955875, -86.13097877926005], 15);
+    L.tileLayer('https://api.maptiler.com/maps/base-v4/256/{z}/{x}/{y}.png?key=pA82nhm5674jWgKvChwM', {
+      maxZoom: 25,
+      attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+    }).addTo(map);
+    var marker = L.marker([40.490404273955875, -86.13097877926005]).addTo(map);
+    marker.bindPopup("Wolfes Smokehouse and BBQ<br>502 N Main St, Kokomo, IN 46901");
+  </script>
+</div>
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-<style>
- #map { height: 500px; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Wolfes Smokehouse and BBQ</h1>
-    <p>Slow-Cooked Perfection, Served Fresh Daily</p>
-  </header>
-
-  <nav>
-    <a href="Home.html">Home</a>
-    <a href="aboutUs.html">About</a>
-    <a href="menu.html">Menu</a>
-    <a href="contact.html">Contact</a>
-    <a href="Photos.html">Photos</a>
-  </nav>
-
-     <div id="map">
-     <script> var map = L.map('map').setView([40.490404273955875, -86.13097877926005], 15);
-      L.tileLayer('https://api.maptiler.com/maps/base-v4/256/{z}/{x}/{y}.png?key=pA82nhm5674jWgKvChwM', {
-        maxZoom: 25,
-        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-      }).addTo(map);
-      var marker = L.marker([40.490404273955875, -86.13097877926005]).addTo(map);
-      marker.bindPopup("Wolfes Smokehouse and BBQ<br>502 N Main St, Kokomo, IN 46901");
-     </script>
-     </div>
+<!-- Right side: Contact -->
+<div class="split right">
+  <div class="centered">
     <section id="contact">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you! Whether it’s a catering request or feedback on your meal, drop us a message below.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-    <footer>
-    <p>&copy; Wolfes Smokehouse and BBQ | 502 N Main St, Kokomo, IN 46901  | (765) 459-2058</p>
-  </footer>
-</body>
-</html>
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Whether it’s a catering request or feedback on your meal, drop us a message below.</p>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="icon fb">Facebook</a>
+        <a href="https://twitter.com" target="_blank" class="icon tw">Twitter</a>
+        <a href="https://instagram.com" target="_blank" class="icon ig">Instagram</a>
+        <a href="https://pinterest.com" target="_blank" class="icon pt">Pinterest</a>
+      </div>
+    </section>
+  </div>
+</div>
