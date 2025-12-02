@@ -1,25 +1,118 @@
-/* ---------- Contact + Map Side by Side ---------- */
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;          /* Stack vertically on small screens */
-  gap: 40px;                /* Space between form and map */
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-  justify-content: center;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
+header {
+  background: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1400&q=80') 
+  no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+}
+
+header h1, header p {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 8px #000;
+}
+
+header p {
+  font-size: 1.3em;
+  text-shadow: 1px 1px 6px #000;
+}
+
+nav {
+  background-color: #c91722;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffbb33;
+}
+
+/* ⛔ REMOVE the old max-width + margin auto that broke the layout */
+section {
+  padding: 60px 20px;
+}
+
+/* Contact section — corrected */
 #contact {
   flex: 1;
   min-width: 300px;
+  max-width: 500px;
+  margin: 0;
 }
 
-#contact form {
-  margin: 0;                /* Remove auto margin since container centers */
+/* Side-by-Side layout */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
+/* Map — corrected, remove old margins/padding/max-width */
 #map {
   flex: 1;
   min-width: 300px;
   height: 500px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #2b1d0e;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #ffbb33;
+  color: #2b1d0e;
+}
+
+footer {
+  background-color: #c91722;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
