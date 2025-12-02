@@ -54,12 +54,12 @@ nav a:hover {
   color: #ffbb33;
 }
 
-/* ⛔ REMOVE the old max-width + margin auto that broke the layout */
+
 section {
   padding: 60px 20px;
 }
 
-/* Contact section — corrected */
+
 #contact {
   flex: 1;
   min-width: 300px;
@@ -67,7 +67,7 @@ section {
   margin: 0;
 }
 
-/* Side-by-Side layout */
+
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -77,14 +77,14 @@ section {
   margin: auto;
 }
 
-/* Map — corrected, remove old margins/padding/max-width */
+
 #map {
   flex: 1;
   min-width: 300px;
   height: 500px;
 }
 
-/* Form styling */
+
 form {
   display: flex;
   flex-direction: column;
