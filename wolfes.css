@@ -54,11 +54,9 @@ nav a:hover {
   color: #ffbb33;
 }
 
-
 section {
   padding: 60px 20px;
 }
-
 
 #contact {
   color: white;
@@ -69,7 +67,6 @@ section {
   background-color: #333;
 }
 
-
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -78,13 +75,11 @@ section {
   margin: auto;
 }
 
-
 #map {
   flex: 1;
   min-width: 300px;
   height: auto;
 }
-
 
 form {
   display: flex;
@@ -117,78 +112,120 @@ footer {
   text-align: center;
   padding: 20px;
 }
-    /* ---------- Menu ---------- */
-    .menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
 
-    .menu-item {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
+/* ---------- Menu ---------- */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .menu-item:hover {
-      transform: translateY(-5px);
-    }
+/* Wrapper for each category (Entrees, Sandwiches, etc.) */
+.menu-section {
+  margin-bottom: 40px;
+}
 
-    .menu-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+/* Category titles */
+.menu-section-title {
+  margin: 0 10px 10px 10px;
+  color: #2b1d0e;
+  text-align: left;
+}
 
-    .menu-item h3 {
-      margin: 10px;
-      color: #2b1d0e;
-    }
+/* Main Menu heading left-aligned */
+#menu h2 {
+  color: black;
+  text-align: left;
+  margin: 0 10px 20px 10px;
+}
 
-    .menu-item p {
-      margin: 10px;
-    }
+.menu-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
 
-    /* ---------- Contact ---------- */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 400px;
-      margin: auto;
-    }
+.menu-item:hover {
+  transform: translateY(-5px);
+}
 
-    input, textarea, button {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
+/* Only the first image inside a menu-item (the main food picture) */
+.menu-item > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-    button {
-      background-color: #2b1d0e;
-      color: white;
-      cursor: pointer;
-      border: none;
-    }
+/* Card titles */
+.menu-item h3, .menu-item h4 {
+  margin: 10px;
+  color: #2b1d0e;
+}
 
-    button:hover {
-      background-color: #ffbb33;
-      color: #2b1d0e;
-    }
+/* Price styling */
+.menu-item .price {
+  margin: 0 10px 10px 10px;
+  font-weight: bold;
+}
 
-    footer {
-      background-color: #c91722;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+/* Fountain drink logos row */
+.drink-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
 
-    footer p {
-      margin: 0;
-    }
+.drink-logos img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.menu-item p {
+  margin: 10px;
+}
+
+/* ---------- Contact ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #2b1d0e;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #ffbb33;
+  color: #2b1d0e;
+}
+
+footer {
+  background-color: #c91722;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
 
 div.gallery {
   display: flex;
@@ -204,9 +241,9 @@ div.gallery-item {
 }
 
 div.gallery-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 div.gallery-item div.desc {
@@ -214,14 +251,15 @@ div.gallery-item div.desc {
   text-align: center;
 }
 
-h2{
+h2 {
   color: black;
   text-align: center;
 }
 
-#map{
-padding: 60px 20px;
-max-width: 1000px;
-margin: auto;
-margin-top: 20px;
+/* Map section on contact page */
+#map {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
 }
