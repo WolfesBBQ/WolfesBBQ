@@ -113,26 +113,26 @@ footer {
   padding: 20px;
 }
 
-/* ---------- Menu ---------- */
+
 .menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Wrapper for each category (Entrees, Sandwiches, etc.) */
+
 .menu-section {
   margin-bottom: 40px;
 }
 
-/* Category titles */
+
 .menu-section-title {
   margin: 0 10px 10px 10px;
   color: #2b1d0e;
   text-align: left;
 }
 
-/* Main Menu heading left-aligned */
+
 #menu h2 {
   color: black;
   text-align: left;
@@ -151,26 +151,26 @@ footer {
   transform: translateY(-5px);
 }
 
-/* Only the first image inside a menu-item (the main food picture) */
+
 .menu-item > img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-/* Card titles */
+
 .menu-item h3, .menu-item h4 {
   margin: 10px;
   color: #2b1d0e;
 }
 
-/* Price styling */
+
 .menu-item .price {
   margin: 0 10px 10px 10px;
   font-weight: bold;
 }
 
-/* Fountain drink logos row */
+
 .drink-logos {
   display: flex;
   flex-wrap: wrap;
@@ -188,7 +188,7 @@ footer {
   margin: 10px;
 }
 
-/* ---------- Contact ---------- */
+
 form {
   display: flex;
   flex-direction: column;
@@ -256,7 +256,7 @@ h2 {
   text-align: center;
 }
 
-/* Map section on contact page */
+
 #map {
   padding: 60px 20px;
   max-width: 1000px;
