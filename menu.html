@@ -269,7 +269,22 @@
     </div>
 
     <!-- Specials -->
-    <div class="menu-section">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const day = new Date().getDay(); // 0=Sun, 1=Mon, 2=Tue, 3=Wed, ...
+
+  if (day === 3) {
+    // Wednesday
+    document.getElementById("specials").hidden = false;
+  } else {
+    // All other days
+    document.getElementById("specials").hidden = true;
+  }
+
+});
+</script>
+    <div id="specials" class="menu-section">
       <h3 class="menu-section-title">Specials</h3>
       <div class="menu">
 
@@ -289,7 +304,6 @@
     </div>
 
   </section>
-
   
   <section id="order-button" style="text-align:center; padding:30px;">
   <a href="https://www.doordash.com/en/store/wolfes-smokehouse-and-bbq-kokomo-24807426/20269171/?srsltid=AfmBOooI2t4pP0iypr7_Ig_2mysoDS-ijhs4RR2wohGG_Vfdi9V9lnIL" 
