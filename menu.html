@@ -292,36 +292,12 @@
 
   
   <section id="order-button" style="text-align:center; padding:30px;">
-    <script>
-      (function(e, t, r, n) {
-          var o, c, s;
-          o = e.document, c = t.children[0], s = o.createElement("script"),
-          e.StorefrontSDKObject = "StorefrontSDK",
-          e[e.StorefrontSDKObject] = {
-              executeCommand: function(t, r) {
-                  e[e.StorefrontSDKObject].buffer.push([t, r])
-              },
-              buffer: []
-          },
-          s.async = 1,
-          s.src = 'https://web-apps.cdn4dd.com/webapps/sdk-storefront/latest/sdk.js',
-          t.insertBefore(s, c)
-      })(window, document.head);
-
-      StorefrontSDK.executeCommand('renderFloatingButton', {
-          businessId: 1234,
-          businessSlug: 'MerchantName',
-          floatingBar: false,   
-          position: 'bottom',
-          buttonAlignment: 'center',
-          backgroundColor: 'transparent',
-          buttonBackgroundColor: '#6f0000',
-          borderColor: 'transparent',
-          buttonText: 'Order Pickup & Delivery',
-          showModal: false
-      });
-    </script>
-  </section>
+  <a href="https://www.doordash.com/en/store/wolfes-smokehouse-and-bbq-kokomo-24807426/20269171/?srsltid=AfmBOooI2t4pP0iypr7_Ig_2mysoDS-ijhs4RR2wohGG_Vfdi9V9lnIL" 
+     class="dd-btn" 
+     target="_blank">
+    Order Pickup & Delivery
+  </a>
+</section>
 
   <footer>
     <p>&copy; PFW IT Students | 502 N Main St, Kokomo, IN 46901 | (260) 555-0123</p>
