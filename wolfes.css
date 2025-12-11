@@ -256,6 +256,7 @@ h2 {
   text-align: center;
 }
 
+/* governs how the button looks */
 .dd-btn {
   display: inline-block;
   padding: 12px 24px;
