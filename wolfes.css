@@ -1,136 +1,190 @@
+/* ---------- Body ---------- */
 body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /*background-color: #f7f2ec;*/
-      color: #333;
-      scroll-behavior: smooth;
-    }
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /*background-color: #f7f2ec;*/
+  color: #333;
+  scroll-behavior: smooth;
+}
 
-    header {
-      background: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
-      position: relative;
-    }
 
-    header::after {
-      content: "";
-      background: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      inset: 0;
-    }
+/* ---------- Header ---------- */
+header {
+  background-image: url("logo_images/bbq_plates_bg.jpg");
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
+}
 
-    header h1 {
-      position: relative;
-      z-index: 1;
-      font-size: 3em;
-      text-shadow: 2px 2px 8px #000;
-    }
+header::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+}
 
-    header p {
-      position: relative;
-      z-index: 1;
-      font-size: 1.3em;
-      text-shadow: 1px 1px 6px #000;
-    }
+header h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 3em;
+  text-shadow: 2px 2px 8px #000;
+}
 
-    nav {
-      background-color: #c91722;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-    }
+header p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 6px #000;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+/* Header logo starts hidden on home page until animation
+  It's visible on other pages */
+.header-logo-icon.home-page {
+  opacity: 0;
+}
 
-    nav a:hover {
-      color: #ffbb33;
-    }
+.header-logo-icon.visible {
+  opacity: 1;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* ---------- Navigation ---------- */
+nav {
+  background-color: #c91722;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
 
-    /* ---------- Menu ---------- */
-    .menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
 
-    .menu-item {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
+nav a:hover {
+  color: #ffbb33;
+}
 
-    .menu-item:hover {
-      transform: translateY(-5px);
-    }
+/* ---------- Logo ---------- */
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
 
-    .menu-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+.header-logo-icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  transition: opacity 0.5s ease-in-out;
+}
 
-    .menu-item h3 {
-      margin: 10px;
-      color: #2b1d0e;
-    }
+.header-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-    .menu-item p {
-      margin: 10px;
-    }
+.header-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
 
-    /* ---------- Contact ---------- */
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 400px;
-      margin: auto;
-    }
+/* ---------- Home Page Animation ---------- */
 
-    input, textarea, button {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
 
-    button {
-      background-color: #2b1d0e;
-      color: white;
-      cursor: pointer;
-      border: none;
-    }
+/* ---------- Section ---------- */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    button:hover {
-      background-color: #ffbb33;
-      color: #2b1d0e;
-    }
+/* ---------- Menu ---------- */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    footer {
-      background-color: #c91722;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+.menu-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
 
-    footer p {
-      margin: 0;
-    }
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  margin: 10px;
+  color: #2b1d0e;
+}
+
+.menu-item p {
+  margin: 10px;
+}
+
+/* ---------- Contact ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #2b1d0e;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #ffbb33;
+  color: #2b1d0e;
+}
+
+footer {
+  background-color: #c91722;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
 
 div.gallery {
   display: flex;
