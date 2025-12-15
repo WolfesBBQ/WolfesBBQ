@@ -15,7 +15,6 @@ header {
   text-align: center;
   padding: 120px 20px;
   position: relative;
-  background-repeat: repeat-x;
   background-size: cover;
   background-position: center;
 }
@@ -39,16 +38,6 @@ header p {
   z-index: 1;
   font-size: 1.3em;
   text-shadow: 1px 1px 6px #000;
-}
-
-/* Header logo starts hidden on home page until animation
-  It's visible on other pages */
-.header-logo-icon.home-page {
-  opacity: 0;
-}
-
-.header-logo-icon.visible {
-  opacity: 1;
 }
 
 /* ---------- Navigation ---------- */
@@ -88,13 +77,26 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
-  transition: opacity 0.5s ease-in-out;
+
+  position: relative;
+  overflow:hidden;
+  cursor: pointer;
 }
 
 .header-logo-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  z-index: 1;
+}
+
+.header-logo-icon video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
 }
 
 .header-text {
@@ -104,7 +106,46 @@ nav a:hover {
 }
 
 /* ---------- Home Page Animation ---------- */
+.animated-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 1;
+  transition: all 0.8s ease-in-out;
+}
 
+.animated-logo video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.animated-logo.shrink {
+  transform:
+    translate(-50%, -50%)
+    scale(0.33);
+  opacity: 0;
+}
+
+.header-logo-icon.home-page {
+  opacity: 0;
+}
+
+.header-logo-icon.visible {
+  opacity: 1;
+}
+
+/* ---------- Section ---------- */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
 /* ---------- Section ---------- */
 section {

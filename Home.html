@@ -6,23 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wolfes Smokehouse and BBQ</title>
   <style>
-    /* ---------- Slideshow Styles ---------- */
+    /* ---------- Global Styles ---------- */
+    * {box-sizing: border-box;}
     .mySlides {display: none;}
-
-    img {
+    
+    .slideshow-container img {
       vertical-align: middle;
       height: 500px;
       object-fit: contain;
       background: black;
     }
     
+    /* Slideshow container */
     .slideshow-container {
       max-width: 1000px;
       position: relative;
       margin: auto;
     }
     
-    /* ---------- Caption Text ---------- */
+    /* Caption text */
     .text {
       color: #f2f2f2;
       font-size: 15px;
@@ -33,7 +35,7 @@
       text-align: center;
     }
     
-    /* ---------- Number Text ---------- */
+    /* Number text (1/3 etc) */
     .numbertext {
       color: #f2f2f2;
       font-size: 12px;
@@ -42,7 +44,7 @@
       top: 0;
     }
     
-    /* ---------- Dots/Bullets ---------- */
+    /* The dots/bullets/indicators */
     .dot {
       height: 15px;
       width: 15px;
@@ -57,7 +59,7 @@
       background-color: #717171;
     }
     
-    /* ---------- Fading Animation ---------- */
+    /* Fading animation */
     .fade {
       animation-name: fade;
       animation-duration: 2.0s;
@@ -68,13 +70,12 @@
       to {opacity: 1}
     }
     
-    /* ---------- Responsive Text Size ---------- */
-    @media (max-width: 300px) {
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
       .text {font-size: 11px}
     }
   </style>
 </head>
-
 <body>
   <!-- Header -->
   <header>
@@ -98,9 +99,10 @@
     <a href="Photos.html">Photos</a>
   </nav>
 
+  <p></p>
+
   <!-- Slideshow -->
   <div class="slideshow-container">
-
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
       <img src="https://houseofnasheats.com/wp-content/uploads/2022/09/Texas-Smoked-Beef-Brisket-Recipe-Squaree-1.jpg" style="width:100%">
@@ -118,9 +120,8 @@
       <img src="https://foremangrillrecipes.com/wp-content/uploads/featured-chicken-thighs-recipe.jpg" style="width:100%">
       <div class="text">Chicken Thighs</div>
     </div>
-
   </div>
-  
+
   <br>
 
   <div style="text-align:center">
@@ -129,6 +130,75 @@
     <span class="dot"></span> 
   </div>
 
+  <script>
+    // Slideshow functionality
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+
+    // Logo animation functionality - only runs on home page
+    document.addEventListener('DOMContentLoaded', function() {
+      const staticLogo = document.querySelector('.header-logo-icon.home-page');
+      
+      // Only run animation if we're on the home page (static logo has home-page class)
+      if (!staticLogo) return;
+      
+      // Create animated logo element
+      const animatedLogoContainer = document.createElement('div');
+      animatedLogoContainer.className = 'animated-logo';
+      
+      const video = document.createElement('video');
+      video.src = 'logo_images/logo.webm';
+      video.autoplay = true;
+      video.muted = true;
+      video.playsInline = true;
+      
+      animatedLogoContainer.appendChild(video);
+      document.body.appendChild(animatedLogoContainer);
+      
+      // When video ends, shrink and fade animated logo, then show static logo
+      video.addEventListener('ended', function() {
+        // Add shrink class to move animated logo to header position
+        animatedLogoContainer.classList.add('shrink');
+        
+        // After shrink animation completes, show static logo and remove animated logo
+        setTimeout(() => {
+          staticLogo.classList.add('visible');
+          
+          // Remove animated logo after fade out
+          setTimeout(() => {
+            animatedLogoContainer.remove();
+          }, 800);
+        }, 100);
+      });
+      
+      // Fallback: if video fails to load or play, show static logo after 5 seconds
+      setTimeout(() => {
+        if (!staticLogo.classList.contains('visible')) {
+          staticLogo.classList.add('visible');
+          animatedLogoContainer.remove();
+        }
+      }, 5000);
+    });
+  </script>
+  <script src="logo_click.js"></script>
+
   <section>
   </section>
   
@@ -136,7 +206,5 @@
     <p>&copy; PFW IT Students | 502 N Main St, Kokomo, IN 46901 | (260) 555-0123</p>
   </footer>
 
-  <script src="logo_splash.js"></script>
-  
 </body>
 </html>
