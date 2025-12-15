@@ -42,3 +42,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, 5000);
 });
+
+// Animation by Kayla Metzger
