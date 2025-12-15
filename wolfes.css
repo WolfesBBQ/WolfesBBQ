@@ -2,21 +2,17 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /*background-color: #f7f2ec;*/
   color: #333;
   scroll-behavior: smooth;
 }
 
-
-/* ---------- Header ---------- */
 header {
-  background-image: url("logo_images/bbq_plates_bg.jpg");
+  background: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1400&q=80') 
+  no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 120px 20px;
   position: relative;
-  background-size: cover;
-  background-position: center;
 }
 
 header::after {
@@ -26,21 +22,21 @@ header::after {
   inset: 0;
 }
 
-header h1 {
+header h1, header p {
   position: relative;
   z-index: 1;
+}
+
+header h1 {
   font-size: 3em;
   text-shadow: 2px 2px 8px #000;
 }
 
 header p {
-  position: relative;
-  z-index: 1;
   font-size: 1.3em;
   text-shadow: 1px 1px 6px #000;
 }
 
-/* ---------- Navigation ---------- */
 nav {
   background-color: #c91722;
   display: flex;

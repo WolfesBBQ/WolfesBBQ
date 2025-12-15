@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="wolfes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wolfes Smokehouse and BBQ</title>
@@ -13,9 +14,45 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
 <style>
+.fa {
   
- #map { height: 500px; }
-  </style>
+  padding: 20px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 25%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.icons{
+position: horizontal;
+padding-left:10px;
+
+}
+.iconitem{
+padding-left: 20px;
+display:flex -5px;
+position: absolute;
+}
+
+</style>
 </head>
 <body>
   <header>
@@ -38,31 +75,48 @@
     <a href="Photos.html">Photos</a>
   </nav>
 
-<!--Russell wants to add in a map and will give syntax-->
-
-     <div id="map"></div>
-     <script> var map = L.map('map').setView([40.490404273955875, -86.13097877926005], 15);
-      L.tileLayer('https://api.maptiler.com/maps/base-v4/256/{z}/{x}/{y}.png?key=pA82nhm5674jWgKvChwM', {
-        maxZoom: 25,
-        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-      }).addTo(map);
-      var marker = L.marker([40.490404273955875, -86.13097877926005]).addTo(map);
-      marker.bindPopup("Wolfes Smokehouse and BBQ<br>502 N Main St, Kokomo, IN 46901");
-     </script>
-
+  
+  <div class="contact-container">
+          <div class="icons">
+        <div class="iconitem">
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="https://www.instagram.com/wolfessmokehouseandbbq/" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.facebook.com/p/Wolfes-Smokehouse-and-BBQ-100088719459613/" target ="_blank"class="fa fa-facebook"></a>
+        <a href="#" class="fa-doordash"></a>
+      </div>
+          </div>
     <section id="contact">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you! Whether it’s a catering request or feedback on your meal, drop us a message below.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-    <footer>
+
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Whether it’s a catering request or feedback on your meal, drop us a message below.</p>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <div id="map"></div>
+  </div>
+
+  <footer>
     <p>&copy; Wolfes Smokehouse and BBQ | 502 N Main St, Kokomo, IN 46901  | (765) 459-2058</p>
   </footer>
   <script src="logo_click.js"></script>
+
+
+  <script>
+    var map = L.map('map').setView([40.490404273955875, -86.13097877926005], 15);
+    L.tileLayer('https://api.maptiler.com/maps/base-v4/256/{z}/{x}/{y}.png?key=pA82nhm5674jWgKvChwM', {
+      maxZoom: 25,
+      attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+    }).addTo(map);
+
+    var marker = L.marker([40.490404273955875, -86.13097877926005]).addTo(map);
+    marker.bindPopup("Wolfes Smokehouse and BBQ<br>502 N Main St, Kokomo, IN 46901");
+  </script>
+
 </body>
 </html>
