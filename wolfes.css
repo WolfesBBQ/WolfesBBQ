@@ -1,3 +1,4 @@
+/* ---------- Body ---------- */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,7 +7,7 @@ body {
 }
 
 header {
-  background: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1400&q=80') 
+  background: url('logo_images/bbq_plates_bg.jpg') 
   no-repeat center center/cover;
   color: white;
   text-align: center;
@@ -21,21 +22,21 @@ header::after {
   inset: 0;
 }
 
-header h1, header p {
+header h1 {
   position: relative;
   z-index: 1;
-}
-
-header h1 {
   font-size: 3em;
   text-shadow: 2px 2px 8px #000;
 }
 
 header p {
+  position: relative;
+  z-index: 1;
   font-size: 1.3em;
   text-shadow: 1px 1px 6px #000;
 }
 
+/* ---------- Navigation ---------- */
 nav {
   background-color: #c91722;
   display: flex;
@@ -54,42 +55,142 @@ nav a:hover {
   color: #ffbb33;
 }
 
+/* ---------- Logo ---------- */
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
 
+.header-logo-icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  transition: all 0.8s ease-in-out;
+  position: relative;
+  overflow:hidden;
+  cursor: pointer;
+}
+
+.header-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.header-logo-icon video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.header-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* ---------- Home Page Animation ---------- */
+.animated-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 1;
+  transition: all 0.8s ease-in-out;
+}
+
+.animated-logo video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.animated-logo.shrink {
+  transform:
+    translate(-50%, -50%)
+    scale(0.33);
+  opacity: 0;
+}
+
+.header-logo-icon.home-page {
+  opacity: 0;
+}
+
+.header-logo-icon.visible {
+  opacity: 1;
+}
+
+/* ---------- Section ---------- */
 section {
   padding: 60px 20px;
-}
-
-
-#contact {
-  color: white;
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  margin: 0;
-  background-color: #333;
-}
-
-
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 60px 20px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
 }
 
-
-#map {
-  flex: 1;
-  min-width: 300px;
-  height: auto;
+/* ---------- Section ---------- */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
+/* ---------- Menu ---------- */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
+.menu-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  margin: 10px;
+  color: #2b1d0e;
+}
+
+.menu-item p {
+  margin: 10px;
+}
+
+/* ---------- Contact ---------- */
 form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-width: 400px;
+  margin: auto;
 }
 
 input, textarea, button {
@@ -100,7 +201,7 @@ input, textarea, button {
 }
 
 button {
-  background-color: #c91722;
+  background-color: #2b1d0e;
   color: white;
   cursor: pointer;
   border: none;
@@ -117,36 +218,43 @@ footer {
   text-align: center;
   padding: 20px;
 }
-    /* ---------- Menu ---------- */
-    .menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
 
-    .menu-item {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
+footer p {
+  margin: 0;
+}
 
-    .menu-item:hover {
-      transform: translateY(-5px);
-    }
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
-    .menu-item img {
+div.gallery-item {
+  margin: 10px;
+  border: 1px solid #ccc;
+  width: 359px;
+  background-color: white;
+}
+
+div.gallery-item img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-    }
+}
 
-    .menu-item h3 {
-      margin: 10px;
-      color: #2b1d0e;
-    }
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+}
 
-    .menu-item p {
-      margin: 10px;
-    }
+h2{
+  color: black;
+  text-align: center;
+}
+
+#map{
+padding: 60px 20px;
+max-width: 1000px;
+margin: auto;
+margin-top: 20px;
+}
