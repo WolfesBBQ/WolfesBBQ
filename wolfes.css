@@ -241,6 +241,20 @@ footer {
   margin: 10px;
 }
 
+.drink-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.drink-logos img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+
 /* ---------- Contact ---------- */
 form {
   display: flex;
